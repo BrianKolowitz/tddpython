@@ -48,8 +48,8 @@ class NewVisitorTest(LiveServerTestCase):
         # edith starts a new to-do list
         self.browser.get(self.live_server_url)
         inputbox = self.browser.find_element_by_id('id_new_item')
-        input.send_keys('Buy peacock feathers')
-        input.send_keys(Keys.ENTER)
+        inputbox.send_keys('Buy peacock feathers')
+        inputbox.send_keys(Keys.ENTER)
         self.wait_for_row_in_list_table('1: Buy peacock feathers')
 
         # She notices that her list has a unique URL
