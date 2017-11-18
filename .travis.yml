@@ -10,5 +10,5 @@ script:
   - python manage.py test
   # - coverage run manage.py test
   - python functional_tests.py
-after_success: 
-  - coverage report
+# after_success: 
+#   - coverage report
