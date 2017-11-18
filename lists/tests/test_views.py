@@ -41,7 +41,7 @@ class NewListTest(TestCase):
 
     def test_for_invalid_input_passes_form_to_template(self):
         response = self.client.post('/lists/new', data={'text': ''})
-        self.assertIsInstance(response.context['form'], ItemForm)
+        self.assertIsInstance(response.context['form'], ExistingListItemForm)
 
     def test_invalid_list_items_arent_saved(self):
         self.client.post('/lists/new', data={'text': ''})
